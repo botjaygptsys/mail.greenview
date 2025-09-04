@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green View Mail</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script>
+      // Prevents FOUC (Flash of Unstyled Content) for dark mode
+      if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'background': '#F3F2EC',
+              'primary': '#7E8A70', // Sage Green
+              'accent': '#C0A06D', // Muted Gold
+              'subtle': '#EAE9E4', // Shadow Grey for borders
+              'charcoal': '#3D403A', // Main text
+              'charcoal-light': '#4A4E47',
+            },
+            fontFamily: {
+              'sans': ['Inter', 'sans-serif'],
+              'serif': ['Cormorant Garamond', 'serif'],
+            },
+             animation: {
+                'bounce-subtle': 'bounce-subtle 1s ease-in-out',
+             },
+             keyframes: {
+                'bounce-subtle': {
+                    '0%, 100%': { transform: 'translateY(0)' },
+                    '50%': { transform: 'translateY(-8px)' },
+                }
+             }
+          }
+        }
+      }
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background-color: #EAE9E4; /* Changed to subtle for app feel */
+        color: #3D403A;
+        font-family: 'Inter', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .dark body {
+        background-color: #2e302b; /* Darker charcoal for app feel */
+        color: #F3F2EC;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .panel-resizer {
+        flex-shrink: 0;
+        width: 4px;
+        background: #EAE9E4;
+        cursor: col-resize;
+        transition: background-color 0.2s;
+      }
+       .panel-resizer:hover {
+        background: #C0A06D;
+       }
+      .dark .panel-resizer {
+         background: #2e302b;
+      }
+      .dark .panel-resizer:hover {
+        background: #C0A06D;
+      }
+    </style>
+
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai",
+    "path": "https://esm.sh/path@^0.12.7",
+    "vite": "https://esm.sh/vite@^7.0.5",
+    "url": "https://esm.sh/url@^0.11.4"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-B4iiSXH_.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-C-Epz-yg.css">
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

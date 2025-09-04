@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base stylesheet for Green View Mail */
+/* Tailwind now built locally (CDN script removed). */
+
+html, body, #root { height: 100%; }
+
+body { margin: 0; }
+
+/* Scrollbar styling (webkit only) */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #C0A06D55; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #C0A06D; }
+
+.dark ::-webkit-scrollbar-thumb { background: #7E8A7055; }
+.dark ::-webkit-scrollbar-thumb:hover { background: #7E8A70; }
+
+/* Simple fade-in animation for mounting elements */
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px);} to { opacity: 1; transform: translateY(0);} }
+.fade-in { animation: fadeIn .25s ease-out; }
